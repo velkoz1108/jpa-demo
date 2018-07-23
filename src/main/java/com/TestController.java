@@ -25,7 +25,7 @@ public class TestController {
     @RequestMapping("/searchUser/{username}")
     public @ResponseBody
     List<User> searchUser(@PathVariable("username") String username) {
-        List<User> result = this.userRepository.findByUsernameContaining(username);
+        List<User> result = this.userRepository.findAll();
         return result;
     }
     @RequestMapping("/username/{username}")
